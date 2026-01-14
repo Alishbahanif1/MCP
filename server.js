@@ -39,5 +39,5 @@ app.post("/add_numbers", async (req, res) => {
   const result = await tools.add_numbers.handler(req.body);
   res.json(result);
 });
-
-app.listen(3000, () => console.log("HTTP MCP server running on port 3000"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`HTTP MCP server running on port ${port}`));
